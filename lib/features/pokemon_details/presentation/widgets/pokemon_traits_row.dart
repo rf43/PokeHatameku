@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PokemonStatsRow extends StatelessWidget {
+class PokemonTraitsRow extends StatelessWidget {
   final double weight;
   final double height;
   final List<String> moves;
 
-  const PokemonStatsRow({
+  const PokemonTraitsRow({
     required this.weight,
     required this.height,
     required this.moves,

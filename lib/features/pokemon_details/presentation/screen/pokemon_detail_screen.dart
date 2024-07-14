@@ -1,11 +1,10 @@
+import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_base_stats.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_desc_box.dart';
-import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_stats_row.dart';
+import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_traits_row.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_type_chip.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_app_palette.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/pokemon_base_stats.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
   const PokemonDetailScreen({super.key});
@@ -107,7 +106,7 @@ class PokemonDetailScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                const PokemonStatsRow(
+                const PokemonTraitsRow(
                   weight: 6.9,
                   height: 0.7,
                   moves: [
