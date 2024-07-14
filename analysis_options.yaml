@@ -24,9 +24,7 @@ linter:
     prefer_single_quotes: true
     avoid_dynamic_calls: true
     always_use_package_imports: true
-    always_declare_return_types: true
     always_put_required_named_parameters_first: true
-    always_specify_types: true
     require_trailing_commas: true
     unnecessary_final: true
 
