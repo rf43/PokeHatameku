@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PokemonDescBox extends StatelessWidget {
+class PokemonDetailDescriptionWidget extends StatelessWidget {
   final String text;
 
-  const PokemonDescBox({required this.text, super.key});
+  const PokemonDetailDescriptionWidget({required this.text, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: Colors.transparent,
       child: Padding(
         padding: const EdgeInsets.only(left: 24, right: 24),
         child: Text(

@@ -35,6 +35,13 @@ final ThemeData cfHatamekuTheme = ThemeData(
         color: Color(0xFF74CB48),
       ),
     ),
+    titleSmall: GoogleFonts.poppins(
+      textStyle: const TextStyle(
+        fontSize: 10,
+        fontWeight: FontWeight.w700,
+        color: Color(0xFF74CB48),
+      ),
+    ),
   ),
 );
 
