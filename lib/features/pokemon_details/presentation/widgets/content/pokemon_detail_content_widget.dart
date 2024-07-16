@@ -1,3 +1,4 @@
+import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_stats_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_base_stats_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_description_widget.dart';
@@ -7,9 +8,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PokemonDetailContentWidget extends StatelessWidget {
+  final PokemonModel model;
   final Widget detailImage;
 
   const PokemonDetailContentWidget({
+    required this.model,
     required this.detailImage,
     super.key,
   });
@@ -22,26 +25,23 @@ class PokemonDetailContentWidget extends StatelessWidget {
         const SizedBox(
           height: 4,
         ),
-        const PokemonTypeWidget(),
+        PokemonTypeWidget(
+          types: model.types,
+        ),
         const SizedBox(
           height: 16,
         ),
-        const PokemonDetailTraitsWidget(
+        PokemonDetailTraitsWidget(
           title: 'About',
-          weight: 6.9,
-          height: 0.7,
-          moves: [
-            'Chlorophyll',
-            'Overgrow',
-          ],
+          weight: model.weight,
+          height: model.height,
+          moves: model.moves,
         ),
         const SizedBox(
           height: 16,
         ),
-        const PokemonDetailDescriptionWidget(
-          text: 'There is a plant seed on its back right from the '
-              'day this Pokémon is born. The seed slowly grows '
-              'larger.',
+        PokemonDetailDescriptionWidget(
+          text: model.description,
         ),
         const SizedBox(
           height: 16,

@@ -1,4 +1,4 @@
-import 'package:cf_poke_hatameku/theme/cf_hatameku_theme_ext_colors.dart';
+import 'package:cf_poke_hatameku/theme/pokemon_type_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,7 +46,7 @@ final ThemeData cfHatamekuTheme = ThemeData(
   ),
 ).copyWith(
   extensions: <ThemeExtension<dynamic>>[
-    const CfHatamekuColors(),
+    const PokemonTypeColors(),
   ],
 );
 
@@ -76,9 +76,9 @@ extension BuildContextExt on BuildContext {
   /// Usage example
   /// ```dart
   /// Container(
-  ///   color: context.hatamekuColors.poison
+  ///   color: context.pokemonTypeColors.poison
   /// )
   /// ```
-  CfHatamekuColors get hatamekuColors =>
-      Theme.of(this).extension<CfHatamekuColors>()!;
+  PokemonTypeColors get pokemonTypeColors =>
+      Theme.of(this).extension<PokemonTypeColors>()!;
 }

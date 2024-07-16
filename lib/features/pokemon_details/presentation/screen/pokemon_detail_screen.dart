@@ -1,3 +1,4 @@
+import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_container_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_image.dart';
@@ -6,16 +7,20 @@ import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
-  const PokemonDetailScreen({super.key});
+  final PokemonModel model;
+
+  const PokemonDetailScreen({required this.model, super.key});
 
   @override
   Widget build(BuildContext context) {
+    var color = model.types[0].getColor(context);
+
     return Stack(
       fit: StackFit.expand,
       children: [
         // Background fill
         Container(
-          color: context.hatamekuColors.grass,
+          color: color,
         ),
 
         // Pokeball flair
@@ -35,7 +40,11 @@ class PokemonDetailScreen extends StatelessWidget {
           top: context.screenSize.height * 0.07,
           left: context.screenSize.width * 0.05,
           right: context.screenSize.width * 0.075,
-          child: const PokemonDetailTitleBar(title: 'Bulbasaur', id: 1),
+          child: PokemonDetailTitleBar(
+            color: color,
+            title: model.name,
+            id: model.id,
+          ),
         ),
 
         // For now, this is a bit of hackery where we're creating
@@ -59,12 +68,13 @@ class PokemonDetailScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 4, right: 4),
             child: PokemonDetailContentWidget(
               detailImage: PokemonDetailImage(
-                imagePath: 'assets/images/bulbasaur.png',
+                imagePath: model.imageUri,
                 // Making this 30% of the screen height
                 // TODO: Is there a better way???
                 width: context.screenSize.height * 0.3,
                 height: context.screenSize.height * 0.3,
               ),
+              model: model,
             ),
           ),
         ),

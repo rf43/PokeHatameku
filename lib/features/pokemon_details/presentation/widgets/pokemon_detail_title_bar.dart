@@ -2,12 +2,14 @@ import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
 
 class PokemonDetailTitleBar extends StatelessWidget {
-  final String title;
+  final Color? color;
   final int id;
+  final String title;
 
   const PokemonDetailTitleBar({
-    required this.title,
+    required this.color,
     required this.id,
+    required this.title,
     super.key,
   });
 
@@ -16,7 +18,7 @@ class PokemonDetailTitleBar extends StatelessWidget {
     return Row(
       children: [
         Material(
-          color: context.hatamekuColors.grass,
+          color: color,
           child: InkWell(
             onTap: () {},
             splashColor: Colors.white12,

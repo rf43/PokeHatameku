@@ -1,27 +1,38 @@
-import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
+import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PokemonTypeWidget extends StatelessWidget {
-  const PokemonTypeWidget({super.key});
+  final List<PokemonType> types;
+
+  const PokemonTypeWidget({required this.types, super.key});
+
+  List<Widget> _getWidgets(BuildContext context, List<PokemonType> types) {
+    var items = <Widget>[];
+
+    for (var i = 0; i < types.length; i++) {
+      items.add(
+        _PokemonDetailTypeChipWidget(
+          title: types[i].name,
+          color: types[i].getColor(context),
+        ),
+      );
+
+      if (i < types.length - 1) {
+        items.add(const SizedBox(width: 16));
+      }
+    }
+
+    return items;
+  }
 
   @override
   Widget build(BuildContext context) {
+    var w = _getWidgets(context, types);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _PokemonDetailTypeChipWidget(
-          title: 'Grass',
-          color: context.hatamekuColors.grass,
-        ),
-        const SizedBox(
-          width: 16,
-        ),
-        _PokemonDetailTypeChipWidget(
-          title: 'Poison',
-          color: context.hatamekuColors.poison,
-        ),
-      ],
+      children: _getWidgets(context, types),
     );
   }
 }
