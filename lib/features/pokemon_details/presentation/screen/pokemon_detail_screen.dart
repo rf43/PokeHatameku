@@ -1,11 +1,9 @@
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_container_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_widget.dart';
+import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_image.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_detail_title_bar.dart';
-import 'package:cf_poke_hatameku/theme/cf_hatameku_app_palette.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
-
-import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_image.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
   const PokemonDetailScreen({super.key});
@@ -17,7 +15,7 @@ class PokemonDetailScreen extends StatelessWidget {
       children: [
         // Background fill
         Container(
-          color: CfHatamekuAppPalette.pokemonTypeColor.grass,
+          color: context.hatamekuColors.grass,
         ),
 
         // Pokeball flair

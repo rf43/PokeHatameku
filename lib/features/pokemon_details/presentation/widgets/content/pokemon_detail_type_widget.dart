@@ -1,4 +1,4 @@
-import 'package:cf_poke_hatameku/theme/cf_hatameku_app_palette.dart';
+import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,14 +12,14 @@ class PokemonTypeWidget extends StatelessWidget {
       children: [
         _PokemonDetailTypeChipWidget(
           title: 'Grass',
-          color: CfHatamekuAppPalette.pokemonTypeColor.grass,
+          color: context.hatamekuColors.grass,
         ),
         const SizedBox(
           width: 16,
         ),
         _PokemonDetailTypeChipWidget(
           title: 'Poison',
-          color: CfHatamekuAppPalette.pokemonTypeColor.poison,
+          color: context.hatamekuColors.poison,
         ),
       ],
     );
@@ -28,7 +28,7 @@ class PokemonTypeWidget extends StatelessWidget {
 
 class _PokemonDetailTypeChipWidget extends StatelessWidget {
   final String title;
-  final Color color;
+  final Color? color;
 
   const _PokemonDetailTypeChipWidget({
     required this.title,
