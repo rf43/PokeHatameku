@@ -5,7 +5,7 @@ import 'package:cf_poke_hatameku/theme/cf_hatameku_app_palette.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/content/pokemon_detail_image.dart';
+import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_image.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
   const PokemonDetailScreen({super.key});

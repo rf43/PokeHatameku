@@ -50,5 +50,5 @@ extension BuildContextExt on BuildContext {
   ThemeData get theme => Theme.of(this);
 
   /// Usage example: `context.size`
-  Size get screenSize => MediaQuery.of(this).size;
+  Size get screenSize => MediaQuery.sizeOf(this);
 }

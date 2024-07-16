@@ -30,8 +30,10 @@ class _PokemonDetailTypeChipWidget extends StatelessWidget {
   final String title;
   final Color color;
 
-  const _PokemonDetailTypeChipWidget(
-      {required this.title, required this.color, super.key});
+  const _PokemonDetailTypeChipWidget({
+    required this.title,
+    required this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
