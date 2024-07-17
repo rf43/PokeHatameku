@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+
 import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_container_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_content_widget.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/content/pokemon_detail_image.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/pokemon_detail_title_bar.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
-import 'package:flutter/material.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
   final PokemonModel model;

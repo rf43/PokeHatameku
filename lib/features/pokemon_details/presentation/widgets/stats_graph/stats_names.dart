@@ -1,7 +1,8 @@
 import 'dart:collection';
 
-import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 import 'package:flutter/material.dart';
+
+import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 
 class PokemonStatsNames extends StatelessWidget {
   final LinkedHashSet<String> names;

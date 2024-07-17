@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/screen/pokemon_detail_screen.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const PokeHatamekuApp());

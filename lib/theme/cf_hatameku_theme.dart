@@ -1,6 +1,8 @@
-import 'package:cf_poke_hatameku/theme/pokemon_type_colors.dart';
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:cf_poke_hatameku/theme/pokemon_type_colors.dart';
 
 final ThemeData cfHatamekuTheme = ThemeData(
   useMaterial3: true,

@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_stats_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/widgets/stats_graph/stats_names.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
-import 'package:flutter/material.dart';
 
 class PokemonDetailBaseStatsWidget extends StatelessWidget {
   final PokemonStats stats;
