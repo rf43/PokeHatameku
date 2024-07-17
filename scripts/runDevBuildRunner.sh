@@ -13,11 +13,14 @@ fi
 
 cd $ROOT
 
-# Flutter clean
+echo "Run flutter clean"
 flutter clean
 
-# Run pub get
+echo "Run flutter pub get"
 flutter pub get
 
-# Run import sorter
+echo "Run generated code command"
+flutter pub run build_runner clean && flutter pub run build_runner build --delete-conflicting-outputs
+
+echo "Run import_sorter"
 dart run import_sorter:main

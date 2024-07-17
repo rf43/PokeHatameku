@@ -20,45 +20,49 @@ class PokemonDetailContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
-        detailImage,
-        const SizedBox(
-          height: 4,
-        ),
-        PokemonTypeWidget(
-          types: model.types,
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        PokemonDetailTraitsWidget(
-          title: 'About',
-          weight: model.weight,
-          height: model.height,
-          moves: model.moves,
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        PokemonDetailDescriptionWidget(
-          text: model.description,
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        const PokemonDetailBaseStatsWidget(
-          stats: PokemonStats(
-            hp: 45,
-            atk: 49,
-            def: 49,
-            satk: 65,
-            sdef: 65,
-            spd: 45,
-          ),
-        ),
-        const SizedBox(
-          height: 16,
+        Column(
+          children: [
+            detailImage,
+            const SizedBox(
+              height: 4,
+            ),
+            PokemonTypeWidget(
+              types: model.types,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            PokemonDetailTraitsWidget(
+              title: 'About',
+              weight: model.weight,
+              height: model.height,
+              moves: model.moves,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            PokemonDetailDescriptionWidget(
+              text: model.description,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            const PokemonDetailBaseStatsWidget(
+              stats: PokemonStats(
+                hp: 45,
+                atk: 49,
+                def: 49,
+                satk: 65,
+                sdef: 65,
+                spd: 45,
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+          ],
         ),
       ],
     );
