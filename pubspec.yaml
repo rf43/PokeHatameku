@@ -32,14 +32,38 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.6
-  google_fonts: ^6.2.1
+  cupertino_icons: ^1.0.8
+  collection: 1.18.0
+  dio: 5.5.0+1
+  equatable: 2.0.5
+  flutter_svg: 2.0.10+1
+  freezed: 2.5.2
+  go_router: 14.2.1
+  google_fonts: 6.2.1
+  json_serializable: 6.8.0
+  material_color_utilities: 0.8.0
 
+# Development dependencies that do not have to be included in the build
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^4.0.0
+  build_runner: 2.4.11
+  flutter_gen_runner: 5.6.0
+  flutter_lints: 4.0.0
+  go_router_builder: ^2.7.0
+  import_sorter: 4.6.0
+  test_api: 0.7.0
+
+flutter_gen:
+  integrations:
+    flutter_svg: true
+
+import_sorter:
+  comments: false
+  ignored_files:
+    - \/*\.g\.dart$
+    - \/*\.gen\.dart$
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -51,6 +75,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:
