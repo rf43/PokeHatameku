@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:google_fonts/google_fonts.dart';
-
+import 'package:cf_poke_hatameku/gen/assets.gen.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PokemonDetailTraitsWidget extends StatelessWidget {
   final String title;
@@ -45,7 +44,7 @@ class PokemonDetailTraitsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/ic_weight.png',
+                          Assets.images.icWeight.path,
                           fit: BoxFit.fill,
                           height: 16,
                           width: 16,
@@ -99,7 +98,7 @@ class PokemonDetailTraitsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/ic_straighten.png',
+                          Assets.images.icStraighten.path,
                           fit: BoxFit.fill,
                           height: 16,
                           width: 16,

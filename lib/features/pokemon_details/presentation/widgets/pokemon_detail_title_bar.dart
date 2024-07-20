@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:cf_poke_hatameku/gen/assets.gen.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 
 class PokemonDetailTitleBar extends StatelessWidget {
@@ -27,7 +28,8 @@ class PokemonDetailTitleBar extends StatelessWidget {
               fit: BoxFit.cover,
               width: 32,
               height: 32,
-              image: const AssetImage('assets/images/arrow_back.png'),
+              image: AssetImage(Assets.images.arrowBack.path),
+              // image: const AssetImage('assets/images/arrow_back.png'),
             ),
           ),
         ),

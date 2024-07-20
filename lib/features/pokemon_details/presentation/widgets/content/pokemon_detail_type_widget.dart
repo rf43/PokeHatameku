@@ -1,6 +1,8 @@
-import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
 
 class PokemonTypeWidget extends StatelessWidget {
   final List<PokemonType> types;
