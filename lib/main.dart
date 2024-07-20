@@ -3,20 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/data/pokemon_model.dart';
 import 'package:cf_poke_hatameku/features/pokemon_details/presentation/screen/pokemon_detail_screen.dart';
+import 'package:cf_poke_hatameku/gen/assets.gen.dart';
 import 'package:cf_poke_hatameku/theme/cf_hatameku_theme.dart';
 
 void main() {
-  runApp(const PokeHatamekuApp());
+  runApp(PokeHatamekuApp());
 }
 
 class PokeHatamekuApp extends StatelessWidget {
-  const PokeHatamekuApp({super.key});
+  PokeHatamekuApp({super.key});
 
-  final _mockPokemon = const PokemonModel(
+  final _mockPokemon = PokemonModel(
     id: 1,
-    types: [GrassType(), PoisonType()],
+    types: [const GrassType(), const PoisonType()],
     name: 'Bulbasaur',
-    imageUri: 'assets/images/bulbasaur.png',
+    imageUri: Assets.images.bulbasaur.path,
     description: 'There is a plant seed on its back right from the '
         'day this Pokémon is born. The seed slowly grows '
         'larger.',

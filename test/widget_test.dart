@@ -13,7 +13,7 @@ import 'package:cf_poke_hatameku/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PokeHatamekuApp());
+    await tester.pumpWidget(PokeHatamekuApp());
 
     var query = find.byType(PokemonDetailContentWidget);
     expect(query, findsOne);
