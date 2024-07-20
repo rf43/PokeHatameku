@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:cf_poke_hatameku/constants/pokemon_types.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PokemonTypeWidget extends StatelessWidget {
   final List<PokemonType> types;
@@ -30,8 +28,6 @@ class PokemonTypeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var w = _getWidgets(context, types);
-
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: _getWidgets(context, types),
